@@ -2,7 +2,7 @@ import funções
 import time
 
 tempo = time.strftime("%d/%m/%Y - %H:%M:%S")
-print(tempo)
+print("Data e horário: ", tempo)
 
 while True:
     acao_usuario = input("Adicionar, mostrar, editar, remover, sair: ").lower()
