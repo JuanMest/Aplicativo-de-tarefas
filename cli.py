@@ -5,7 +5,7 @@ tempo = time.strftime("%d/%m/%Y - %H:%M:%S")
 print("Data e horário: ", tempo)
 
 while True:
-    acao_usuario = input("Adicionar, mostrar, editar, remover, sair: ").lower()
+    acao_usuario = input("Adicionar, mostrar, editar, completar, sair: ").lower()
     acao_usuario = acao_usuario.strip()
 
     if acao_usuario.startswith("adicionar"):
@@ -43,9 +43,9 @@ while True:
             print("Comando inválido")
             continue
 
-    elif acao_usuario.startswith("remover"):
+    elif acao_usuario.startswith("completar"):
         try:
-            n = int(acao_usuario[8:])
+            n = int(acao_usuario[11:])
 
             lista = funções.leitura()
 
@@ -55,7 +55,7 @@ while True:
 
             funções.registrar(lista)
 
-            print(f"O item {item_removido.strip()} foi removido na sua lista de tarefas!")
+            print(f"O item {item_removido.strip()} foi concluído na sua lista de tarefas!")
 
         except IndexError:
             print("Não existe nenhuma tarefa com este número!")
