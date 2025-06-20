@@ -7,13 +7,13 @@ relogio = sg.Text("", key="relogio")
 
 rotulo = sg.Text("Adicionar tarefa: ")
 caixa_entrada = sg.InputText(tooltip="Digite a tarefa: ", key="tarefa")
-botao_add = sg.Button("Adicionar")
+botao_add = sg.Button("Adicionar", mouseover_colors='DarkBlue')
 
 caixa_lista = sg.Listbox(values=funções.leitura(), key="lista", enable_events=True, size=(40, 15))
-botao_edit = sg.Button("Editar")
+botao_edit = sg.Button("Editar", mouseover_colors='DarkBlue')
 
-botao_completar = sg.Button("completar")
-botao_sair = sg.Button("Sair")
+botao_completar = sg.Button("completar", mouseover_colors='DarkBlue')
+botao_sair = sg.Button("Sair", mouseover_colors='DarkBlue')
 
 janela = sg.Window("Lista de tarefas",
                    layout=[[relogio],
