@@ -45,7 +45,7 @@ while True:
 
     elif acao_usuario.startswith("completar"):
         try:
-            n = int(acao_usuario[11:])
+            n = int(acao_usuario[10:])
 
             lista = funções.leitura()
 
